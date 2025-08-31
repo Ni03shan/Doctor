@@ -1,0 +1,42 @@
+<nav class="bg-white shadow-md w-full">
+  <div class="container mx-auto min-w-[80%] flex justify-between items-center py-3 px-1">
+    
+    <a href="/" class="text-[23px] font-semibold !text-pink-600 !no-underline">XYZ Hospital</a>
+
+    <ul class="hidden md:flex items-center space-x-6">
+      <li><a href="#" class="text-black hover:!text-pink-600 !no-underline">Home</a></li>
+      <li><a href="#" class="text-black hover:!text-pink-600 !no-underline">About</a></li>
+      <li><a href="#" class="text-black hover:!text-pink-600 !no-underline">Department</a></li>
+      <li><a href="#" class="text-black hover:!text-pink-600 !no-underline">Doctor</a></li>
+      <li><a href="#" class="text-black hover:!text-pink-600 !no-underline">Blog</a></li>
+      <li><a href="#" class="text-black hover:!text-pink-600 !no-underline">Contact</a></li>
+    </ul>
+    <div class="!min-w-[100px] ml-[39px] md:flex !justify-around gap-3 ">
+      <button class="bg-red-500 !rounded-[5%] font-bold hover:!opacity-70 !min-w-[60px] px-2 !h-[40px] !text-[13px] !text-white"> Have a account ?<br>Sign In</button>
+      <button class="bg-red-500 !rounded-[5%] font-bold hover:!opacity-70 !min-w-[60px] px-2 !h-[40px] !text-[13px] !text-white">New user ?<br>Sign Up</button>
+      <button class="md:hidden !text-3xl md:ml-[4rem] !border-1 border-grey !rounded-l w-[40px]" id="menu-btn">
+        ☰
+      </button>
+    </div>
+  </div>
+
+  <div class="md:hidden hidden flex flex-col space-y-4 px-4 pb-3" id="mobile-menu">
+    <a href="#" class="text-black ml-[15px] hover:!text-pink-600 !no-underline">Home</a>
+    <a href="#" class="text-black ml-[15px] hover:!text-pink-600 !no-underline">About</a>
+    <a href="#" class="text-black ml-[15px] hover:!text-pink-600 !no-underline">Department</a>
+    <a href="#" class="text-black ml-[15px] hover:!text-pink-600 !no-underline">Doctor</a>
+    <a href="#" class="text-black ml-[15px] hover:!text-pink-600 !no-underline">Blog</a>
+    <a href="#" class="text-black ml-[15px] hover:!text-pink-600 !no-underline">Contact</a>
+  </div>
+</nav>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+

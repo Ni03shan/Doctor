@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+    </style>
+</head>
+<body class=" flex items-center flex-col ">
+    <%- include("./include/navbar.ejs") %>
+    <div class=" w-[290px] mt-14 min-h-[320px] py-5 shadow-md rounded-xl border-2 bg-gray-200">
+        <div class="flex justify-center gap-2 px-4 font-semibold text-[14px] text-white">
+            <button class="patient bg-red-500 p-2  min-w-[120px] py-1 max-h-[50px] hover:opacity-80 text-center shadow-md rounded-xl ">Login as a Patient</button>
+            <button class="doctor bg-blue-500 p-2 min-w-[120px] py-1 max-h-[50px] hover:opacity-80 text-center  shadow-md rounded-xl ">Login as a Doctor</button>
+        </div>
+        <form class="flex mt-2 flex-col items-center gap-6 ">
+            <p class="form-title text-xl font-bold">Sign in to your account</p>
+            <div class="input-container flex relative items-center ">
+                <input placeholder="Enter email" type="email" class="email h-8 px-3 rounded-xl shadow-md">
+                <span class="absolute top-2 right-3 ">
+                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[1rem] h-[rem] text-[#9CA3AF]">
+                        <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+                    </svg>
+                </span>
+            </div>
+            <div class="input-container flex relative items-center ">
+                <input placeholder="Enter password" type="password" class="password h-8 px-3 rounded-xl shadow-md">
+                
+                <span class="absolute top-2 right-3 ">
+                    <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[1rem] h-[rem] text-[#9CA3AF]">
+                        <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+                    </svg>
+                </span>
+            </div>
+         <button class="block py-3 px-5 bg-indigo-600 text-white text-sm font-medium w-[80%] rounded-lg uppercase hover:scale-90" type="submit">
+             Sign in
+            </button>
+            
+            <p class="account hidden text-gray-500 text-sm text-center">
+                No account?
+                <a href="/signUp" class=" underline text-blue-500">Sign up</a>
+            </p>
+        </form>
+        
+    </div>
+    <script>
+        let patient=document.querySelector(".patient")
+        let doctor=document.querySelector(".doctor")
+        let email=document.querySelector(".email")
+        let password=document.querySelector(".password")
+        let account=document.querySelector(".account")
+    
+            patient.addEventListener("click",()=>{
+              patient.style.cssText=`
+              width: 100%;
+              backgroundColor:red;
+              height:50px;
+              `;
+              doctor.style.cssText=`
+              display:none;
+              `;
+              account.style.display="block"
+            })
+            doctor.addEventListener("click",()=>{
+              doctor.style.cssText=`
+              width: 100%;
+              backgroundColor:blue;
+              height:50px;
+              `;
+              patient.style.cssText=`
+              display:none;
+              `;
+              email.placeholder="Enter Doctor Id.."
+              account.style.display="none"
+            })
+    </script>
+    </body>
+    </html>      

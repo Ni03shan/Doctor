@@ -16,6 +16,12 @@ app.use(methodOverride("_method"));
 app.get("/",(req,res)=>{
     res.render("Home.ejs")
 })
+app.get("/signin",(req,res)=>{
+  res.render("./signIn.ejs")
+})
+app.get("/signUp",(req,res)=>{
+  res.render("./signUp.ejs")
+})
 app.listen(3000, () => {
   console.log("port is working");
 });

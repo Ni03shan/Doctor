@@ -16,10 +16,10 @@
             <button class="patient bg-red-500 p-2  min-w-[120px] py-1 max-h-[50px] hover:opacity-80 text-center shadow-md rounded-xl ">Login as a Patient</button>
             <button class="doctor bg-blue-500 p-2 min-w-[120px] py-1 max-h-[50px] hover:opacity-80 text-center  shadow-md rounded-xl ">Login as a Doctor</button>
         </div>
-        <form class="flex mt-2 flex-col items-center gap-6 ">
+        <form class=" flex mt-2 flex-col items-center gap-6 ">
             <p class="form-title text-xl font-bold">Sign in to your account</p>
             <div class="input-container flex relative items-center ">
-                <input placeholder="Enter email" type="email" class="email h-8 px-3 rounded-xl shadow-md">
+                <input placeholder="Enter email" required type="email" class="email h-8 px-3 rounded-xl shadow-md">
                 <span class="absolute top-2 right-3 ">
                     <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[1rem] h-[rem] text-[#9CA3AF]">
                         <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
@@ -27,7 +27,7 @@
                 </span>
             </div>
             <div class="input-container flex relative items-center ">
-                <input placeholder="Enter password" type="password" class="password h-8 px-3 rounded-xl shadow-md">
+                <input placeholder="Enter password" required type="password" class="password h-8 px-3 rounded-xl shadow-md">
                 
                 <span class="absolute top-2 right-3 ">
                     <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[1rem] h-[rem] text-[#9CA3AF]">
@@ -53,7 +53,7 @@
         let email=document.querySelector(".email")
         let password=document.querySelector(".password")
         let account=document.querySelector(".account")
-    
+        
             patient.addEventListener("click",()=>{
               patient.style.cssText=`
               width: 100%;

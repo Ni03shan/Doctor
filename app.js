@@ -22,6 +22,12 @@ app.get("/signin",(req,res)=>{
 app.get("/signUp",(req,res)=>{
   res.render("./signUp.ejs")
 })
+app.get("/appointment",(req,res)=>{
+  res.render("./appointment")
+})
+app.get("/doctors",(req,res)=>{
+  res.render("./alldoctor.ejs")
+})
 app.listen(3000, () => {
   console.log("port is working");
 });

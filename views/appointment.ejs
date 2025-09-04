@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class=" flex items-center flex-col ">
+    <%- include("./include/navbar.ejs") %>
+    <div class=" w-[290px] mt-14 min-h-[320px] py-5 shadow-md rounded-xl border-2 bg-gray-200">
+        <form class="flex mt-2 flex-col items-center gap-6 ">
+            <p class="form-title text-xl font-bold">Book Appointment</p>
+            <div class="input-container flex relative items-center ">
+                <input placeholder="Enter name.." class="email h-8 px-3 rounded-xl shadow-md">
+            </div>
+            <div class="input-container flex relative items-center ">
+                <input placeholder="Enter contact No.." class="email h-8 px-3 rounded-xl shadow-md">
+                <span class="absolute top-1 right-3 ">
+                   <i class="fa-sharp-duotone fa-solid fa-phone opacity-50"></i>
+                </span>
+            </div>
+            <div class="input-container flex relative items-center ">
+                <select name="choose Department" id=""  class="h-8 px-3 rounded-xl text-gray-500 w-[201px] shadow-md">
+                    <option value="">Choose Department</option>
+                    <option value="">Neurology</option>
+                    <option value="">Surgical</option>
+                    <option value="">Dental</option>
+                    <option value="">Opthalmology</option>
+                    <option value="">Cardiology</option>
+                    <option value="">Gianology</option>
+                </select>
+            </div>
+            <div class="input-container flex relative items-center ">
+                <select name="choose Department" id=""  class="h-8 px-3 rounded-xl text-gray-500 w-[201px] shadow-md">
+                    <option value="">Select Doctors</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="input-container flex relative items-center ">
+                <input placeholder="Enter Time" type="time" class="password h-8 px-3 w-[201px] rounded-xl shadow-md">
+            
+            </div>
+         <button class="block py-3 px-5 bg-indigo-600 text-white text-sm font-medium w-[80%] rounded-lg uppercase hover:scale-90" type="submit">
+             Get Appointment
+            </button>
+            
+            <p class="account text-gray-500 text-sm text-center">
+                Already have account?
+                <a href="/signin" class=" underline text-blue-500">Sign in</a>
+            </p>
+        </form>
+        
+    </div>
+</body>
+</html>
